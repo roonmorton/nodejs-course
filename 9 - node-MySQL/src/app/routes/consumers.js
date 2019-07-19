@@ -11,14 +11,16 @@ module.exports = (app, mysql, model) => {
                     .fetch()
                     .then(
                         result => {
+                            connection.json(result);
                             console.log(result);
                         })
                     .catch(
                         err => {
+                            connection.json(err);
                             console.log(err.message);
                         }
                     );
-                connection.end();
+                
                 console.log("peticion GET");
     });
 };
