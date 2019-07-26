@@ -28,10 +28,10 @@ app.listen(8088, () => {
 
 
 const app = require('./config/server');
-const mysql = require("mysql");
-const model = require('./app/models/Model');
+//const mysql = require("mysql");
+//const model = require('./app/models/Model');
 
-require('./app/routes/consumers')(app,mysql,model);
+require('./app/routes/consumers')(app);
 //require('./app/routes/consumers_test')(app);
 
 
